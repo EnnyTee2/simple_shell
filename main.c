@@ -45,7 +45,7 @@ char *cshell_read_line(void)
                 /* Read in a character in the infinite loop */
                 cha = getchar();
 
-                // If it gets EOF, replace it with a null character and return.
+                /* If it gets EOF, replace it with a null character and return. */
                 if (cha == EOF || cha == '\n')
                 {
                         buffer[position] = '\0';
@@ -130,7 +130,8 @@ int cshell_launch(char **args)
         else 
         {
                 /* Parent process */
-                do {
+                do 
+                {
                         wpid = waitpid(pid, &status, WUNTRACED);
                 } while (!WIFEXITED(status) && !WIFSIGNALED(status));
         }
@@ -149,9 +150,9 @@ char *builtin_string[] = {
 };
 
 int (*builtin_funcs[]) (char **) = {
-        &shell_cd,
-        &shell_help,
-        &shell_exit
+        &cshell_cd,
+        &cshell_help,
+        &cshell_exit
 };
 
 int cshell_builtin_num()
