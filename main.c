@@ -79,7 +79,7 @@ char **cshell_split_line(char *line)
 
         if (!tokens)
         {
-                fprintf(stderr, "lsh: allocation error\n");
+                fprintf(stderr, "cshell: allocation error\n");
                 exit(EXIT_FAILURE);
         }
 
@@ -104,7 +104,7 @@ char **cshell_split_line(char *line)
                 token = strtok(NULL, TOKEN_DELIMITER);
         }
         tokens[position] = NULL;
-        return tokens;
+        return (tokens);
 }
 
 int cshell_launch(char **args)
@@ -135,7 +135,7 @@ int cshell_launch(char **args)
                 } while (!WIFEXITED(status) && !WIFSIGNALED(status));
         }
 
-        return 1;
+        return(1);
 }
 
 
@@ -156,7 +156,7 @@ int (*builtin_funcs[]) (char **) = {
 
 int cshell_builtin_num()
 {
-        return sizeof(builtin_string) / sizeof(char *);
+        return (sizeof(builtin_string) / sizeof(char *));
 }
 
 /*
@@ -166,7 +166,7 @@ int cshell_cd(char **args)
 {
         if (args[1] == NULL)
         {
-                fprintf(stderr, "lsh: expected argument to \"cd\"\n");
+                fprintf(stderr, "cshell: expected argument to \"cd\"\n");
         } 
         else 
         {
