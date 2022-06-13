@@ -23,3 +23,4 @@ int cshell_cd(char **args);
 int cshell_help(char **args);
 int cshell_exit(char **args);
 int cshell_execute(char **args);
+int cshell_builtin_num();
