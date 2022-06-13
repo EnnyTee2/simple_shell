@@ -2,11 +2,10 @@
 
 int main(int argc, char **argv)
 {
-        /* Load config files, if any */
-        /* Run command loop. */
+        /* start shell loop. */
         cshell_loop();
         
-        /* Perform any shutdown/cleanup. */
+        /* shutdown/cleanup. */
         return EXIT_SUCCESS;
 }
 
@@ -33,7 +32,7 @@ char *cshell_read_line(void)
         int bufsize = SHELL_BUFSIZE;
         int position = 0;
         char *buffer = malloc(sizeof(char) * bufsize);
-        int ;
+        int cha;
 
         if (!buffer)
         {
@@ -46,7 +45,7 @@ char *cshell_read_line(void)
                 /* Read in a character in the infinite loop */
                 cha = getchar();
 
-                // If we hit EOF, replace it with a null character and return.
+                // If it gets EOF, replace it with a null character and return.
                 if (cha == EOF || cha == '\n')
                 {
                         buffer[position] = '\0';
