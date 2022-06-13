@@ -2,7 +2,9 @@
 
 int main(int argc, char **argv)
 {
-        /* start shell loop. */
+        void(argc);
+	char* prog = argv[0];
+	/* start shell loop. */
         cshell_loop();
         
         /* shutdown/cleanup. */
