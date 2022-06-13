@@ -208,7 +208,7 @@ int cshell_execute(char **args)
                 return (1);
         }
 
-        for (i = 0; i < lsh_num_builtins(); i++) 
+        for (i = 0; i < cshell_builtin_num(); i++) 
         {
                 if (strcmp(args[0], builtin_string[i]) == 0)
                 {
