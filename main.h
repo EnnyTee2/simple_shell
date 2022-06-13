@@ -7,12 +7,16 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/wait.h>
 
 void cshell_loop(void);
 char *cshell_read_line(void);
 char **cshell_split_line(char *line);
 
-int shell_launch(char **args);
+int cshell_launch(char **args);
 
 int cshell_builtins();
 int cshell_cd(char **args);
