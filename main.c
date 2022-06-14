@@ -118,14 +118,14 @@ int cshell_launch(char **args)
                 /* Child process */
                 if (execvp(args[0], args) == -1)
                 {
-                        perror("cshell");
+                        perror("cshell:");
                 }
                 exit(EXIT_FAILURE);
         }
         else if (pid < 0)
         {
                 /* Error forking */
-                perror("cshell");
+                perror("cshell:");
         }
         else 
         {
@@ -173,7 +173,7 @@ int cshell_cd(char **args)
         {
                 if (chdir(args[1]) != 0)
                 {
-                        perror("cshell");
+                        perror("cshell:");
                 }
         }
         return (1);
