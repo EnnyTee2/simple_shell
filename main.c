@@ -2,8 +2,6 @@
 
 int main(int argc, char **argv)
 {
-        void(argc);
-	char* prog = argv[0];
 	/* start shell loop. */
         cshell_loop();
         
