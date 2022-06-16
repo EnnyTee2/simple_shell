@@ -25,4 +25,25 @@ int cshell_exit(char **args);
 int cshell_execute(char **args);
 int cshell_builtin_num();
 
+/*
+  List of builtin commands, followed by their corresponding functions.
+ */
+
+char *builtin_string[] = {
+        "cd",
+        "help",
+        "exit"
+};
+
+int (*builtin_funcs[]) (char **) = {
+        &cshell_cd,
+        &cshell_help,
+        &cshell_exit
+};
+
+int cshell_builtin_num()
+{
+        return (sizeof(builtin_string) / sizeof(char *));
+}
+
 #endif
