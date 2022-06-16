@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * chsell_loop - creates the shell loop
  * @line: function call for command reading
