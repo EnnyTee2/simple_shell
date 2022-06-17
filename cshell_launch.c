@@ -27,13 +27,13 @@ int cshell_launch(char **args)
                 /* Error forking */
                 perror("cshell:");
         }
-        else
+        /*else
         {
                 /* Parent process */
                 do {
                         wpid = waitpid(pid, &status, WUNTRACED);
                 } while (!WIFEXITED(status) && !WIFSIGNALED(status));
-        }
+        }*/
 
         return(1);
 }
