@@ -6,10 +6,9 @@
  * Return: exit_success (0)
  */
 
-int main(int argc)
+int main()
 {
         /* start shell loop. */
-        (void) argc;
         cshell_loop();
         
         /* shutdown/cleanup. */
