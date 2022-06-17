@@ -2,6 +2,7 @@
 
 /**
  * builtin_string - list to contain all strings
+ * builtin_funcs - array pointer to store bultin command addresses
  */
 
 char *builtin_string[] = {
@@ -9,10 +10,6 @@ char *builtin_string[] = {
         "help",
         "exit"
 };
-
-/**
- * builtin_funcs - array pointer to store bultin command addresses
- */
 
 int (*builtin_funcs[]) (char **) = {
         &cshell_cd,
