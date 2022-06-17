@@ -1,13 +1,27 @@
 #include "main.h"
 
+<<<<<<< HEAD
 int main(int argc, char **argv)
 {
 	/* start shell loop. */
+=======
+/**
+ * main - entry point
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: exit_success (0)
+ */
+
+int main(int argc, char **argv)
+{
+        /* start shell loop. */
+>>>>>>> 3a74c2e1adfdc24530fed4fabc5fb7475e7be479
         cshell_loop();
         
         /* shutdown/cleanup. */
         return EXIT_SUCCESS;
 }
+<<<<<<< HEAD
 
 void cshell_loop(void)
 {
@@ -220,3 +234,5 @@ int cshell_execute(char **args)
         return (cshell_launch(args));
 }
 
+=======
+>>>>>>> 3a74c2e1adfdc24530fed4fabc5fb7475e7be479
