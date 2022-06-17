@@ -20,8 +20,8 @@ int cshell_launch(char **args);
 
 int cshell_builtins();
 int cshell_cd(char **args);
-int cshell_help(char **args);
-int cshell_exit(char **args);
+int cshell_help();
+int cshell_exit();
 int cshell_execute(char **args);
 int cshell_builtin_num();
 
