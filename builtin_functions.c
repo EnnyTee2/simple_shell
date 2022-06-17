@@ -50,7 +50,7 @@ int cshell_cd(char **args)
  * Return: 1
  */
 
-int cshell_help(void)
+int cshell_help()
 {
 	int i;
 
