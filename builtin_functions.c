@@ -1,21 +1,13 @@
 #include "main.h"
 
-/**
+/*
  * builtin_string - list to contain all strings
  * builtin_funcs - array pointer to store bultin command addresses
  */
 
-char *builtin_string[] = {
-        "cd",
-        "help",
-        "exit"
-};
+char *builtin_string[] = { "cd", "help", "exit" };
 
-int (*builtin_funcs[]) (char **) = {
-        &cshell_cd,
-        &cshell_help,
-        &cshell_exit
-};
+int (*builtin_funcs[]) (char **) = { &cshell_cd, &cshell_help, &cshell_exit };
 
 /**
  * cshell_builtin_num - get the number of items in builtin_string.
