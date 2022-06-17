@@ -2,7 +2,6 @@
 
 /**
  * main - entry point
- * @argc: argument count
  * Return: exit_success (0)
  */
 
