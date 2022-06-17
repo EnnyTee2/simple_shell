@@ -8,7 +8,7 @@
 
 int cshell_launch(char **args)
 {
-        pid_t pid, wpid;
+        pid_t pid;
         int status;
         (void) wpid;
         
