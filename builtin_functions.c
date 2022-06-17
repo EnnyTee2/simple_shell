@@ -71,7 +71,7 @@ int cshell_help(void)
  * Return: 0 (done)
  */
 
-int cshell_exit(void)
+int cshell_exit()
 {
 	return (0);
 }
