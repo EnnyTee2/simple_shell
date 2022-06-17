@@ -1,10 +1,7 @@
 #include "main.h"
 
 /**
- * chsell_loop - creates the shell loop
- * @line: function call for command reading
- * @args: function call for line processing
- * @status: function call for execution
+ * cshell_loop - creates the shell loop
  */
 
 void cshell_loop(void)
