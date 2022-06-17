@@ -29,9 +29,10 @@ int cshell_launch(char **args)
         else 
         {
                 /* Parent process */
-                do {
+                while (!WIFEXITED(status) && !WIFSIGNALED(status))
+                {
                         wpid = waitpid(pid, &status, WUNTRACED);
-                } while (!WIFEXITED(status) && !WIFSIGNALED(status));
+                }
         }
 
         return(1);
