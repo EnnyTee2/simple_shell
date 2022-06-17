@@ -14,7 +14,7 @@ void cshell_loop(void)
         int status;
 
         do {
-        printf("> ");
+        printf("$ ");
         line = cshell_read_line();
         args = cshell_split_line(line);
         status = cshell_execute(args);
