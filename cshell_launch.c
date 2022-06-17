@@ -33,7 +33,6 @@ int cshell_launch(char **args)
                 /* Error forking */
                 perror("cshell:");
         }
-        else 
 
         return(1);
 }
