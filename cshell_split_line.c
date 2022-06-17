@@ -2,9 +2,7 @@
 
 /**
  * cshell_split_line - splits the line to extract commands
- * @bufsize: buffer size
- * @tokens: double pointer to allocated memory
- * @token: string literal to store extracted commands
+ * @line: command stream extracted by read_line
  * Return: returns splitted tokens according to delimiter applied
  */
 
