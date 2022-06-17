@@ -10,8 +10,6 @@ int cshell_launch(char **args)
 {
         pid_t pid;
         int status;
-        (void) wpid;
-        
 
         pid = fork();
         if (pid == 0)
@@ -23,18 +21,19 @@ int cshell_launch(char **args)
                 }
                 exit(EXIT_FAILURE);
         }
-        else if (pid < 0)
-        {
-                /* Error forking */
-                perror("cshell:");
-        }
-        else 
+        else if (pid > 0)
         {
                 /* Parent process */
                 do {
                         wpid = waitpid(pid, &status, WUNTRACED);
                 } while (!WIFEXITED(status) && !WIFSIGNALED(status));
         }
+        else
+        {
+                /* Error forking */
+                perror("cshell:");
+        }
+        else 
 
         return(1);
 }
