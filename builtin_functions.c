@@ -21,7 +21,7 @@ int cshell_cd(char **args)
         return (1);
 }
 
-int cshell_help(char **args)
+int cshell_help(char)
 {
         int i;
         printf("A Simple Shell Written in C\n");
