@@ -30,8 +30,8 @@ int cshell_cd(char **args)
 	if (args[1] == NULL)
 	{
 		fprintf(stderr, "cshell: expected argument to \"cd\"\n");
-	} 
-	else 
+	}
+	else
 	{
 		if (chdir(args[1]) != 0)
 		{
@@ -45,10 +45,11 @@ int cshell_cd(char **args)
  * cshell_help - handle and display the help messages
  * Return: 1
  */
- 
+
 int cshell_help()
 {
 	int i;
+
 	printf("A Simple Shell Written in C\n");
 	printf("Type program names and desired arguments, then press enter.\n");
 	printf("The following are the built in programs:\n");
