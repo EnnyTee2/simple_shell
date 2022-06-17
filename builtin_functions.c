@@ -1,21 +1,6 @@
 #include "main.h"
 
 
-/**
- * cshell_builtin_num - get the number of items in builtin_string.
- * Return: int, number of elements.
- *
- * cshell_cd - handle cd errors
- * Return: (1) success.
- *
- * cshell_help - handle and display the help messages
- * cshell_exit - exit the shell
- * Return: (0)
- *
- * cshell_execute - execute the commands
- * Return: call the launch function
- */
-
 char *builtin_string[] = {
         "cd",
         "help",
@@ -28,10 +13,20 @@ int (*builtin_funcs[]) (char **) = {
         &cshell_exit
 };
 
+/**
+ * cshell_builtin_num - get the number of items in builtin_string.
+ * Return: int, number of elements.
+ */
+
 int cshell_builtin_num()
 {
         return (sizeof(builtin_string) / sizeof(char *));
 }
+
+/**
+ * cshell_cd - handle cd errors
+ * Return: (1) success.
+ */
 
 int cshell_cd(char **args)
 {
@@ -49,6 +44,11 @@ int cshell_cd(char **args)
         return (1);
 }
 
+/**
+ * cshell_help - handle and display the help messages
+ * Return: 1
+ */
+
 int cshell_help()
 {
         int i;
@@ -64,10 +64,20 @@ int cshell_help()
         return (1);
 }
 
+/**
+ * cshell_exit - exit the shell
+ * Return: 0
+ */
+
 int cshell_exit()
 {
         return (0);
 }
+
+/**
+ * cshell_execute - execute program
+ * Return: call the launch function
+ */
 
 int cshell_execute(char **args)
 {
