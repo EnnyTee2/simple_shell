@@ -19,9 +19,9 @@ char **cshell_split_line(char *line);
 int cshell_launch(char **args);
 int cshell_builtins();
 int cshell_cd(char **args);
-int cshell_help();
-int cshell_exit();
+int cshell_help(void);
+int cshell_exit(void);
 int cshell_execute(char **args);
-int cshell_builtin_num();
+int cshell_builtin_num(void);
 
 #endif
