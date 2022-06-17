@@ -14,7 +14,7 @@ int (*builtin_funcs[]) (char **) = { &cshell_cd, &cshell_help, &cshell_exit };
  * Return: int, number of elements.
  */
 
-int cshell_builtin_num(void)
+int cshell_builtin_num()
 {
 	return (sizeof(builtin_string) / sizeof(char *));
 }
@@ -46,7 +46,7 @@ int cshell_cd(char **args)
  * Return: 1
  */
 
-int cshell_help(void)
+int cshell_help()
 {
 	int i;
 
@@ -67,7 +67,7 @@ int cshell_help(void)
  * Return: 0 (done)
  */
 
-int cshell_exit(void)
+int cshell_exit()
 {
 	return (0);
 }
