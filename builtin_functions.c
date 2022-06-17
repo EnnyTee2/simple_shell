@@ -1,10 +1,19 @@
 #include "main.h"
 
-/*
-  Builtin function implementations as follows:
-*/
-/*
-  List of builtin commands, followed by their corresponding functions.
+
+/**
+ * cshell_builtin_num - get the number of items in builtin_string.
+ * Return: int, number of elements.
+ *
+ * cshell_cd - handle cd errors
+ * Return: (1) success.
+ *
+ * cshell_help - handle and display the help messages
+ * cshell_exit - exit the shell
+ * Return: (0)
+ *
+ * cshell_execute - execute the commands
+ * Return: call the launch function
  */
 
 char *builtin_string[] = {
@@ -78,5 +87,5 @@ int cshell_execute(char **args)
                 }
         }
 
-        return cshell_launch(args);
+        return (cshell_launch(args));
 }
