@@ -21,17 +21,17 @@ int cshell_launch(char **args)
                 }
                 exit(EXIT_FAILURE);
         }
-        else if (pid > 0)
+        else if (pid < 0)
+        {
+                /* Error forking */
+                perror("cshell:");
+        }
+        else
         {
                 /* Parent process */
                 do {
                         wpid = waitpid(pid, &status, WUNTRACED);
                 } while (!WIFEXITED(status) && !WIFSIGNALED(status));
-        }
-        else
-        {
-                /* Error forking */
-                perror("cshell:");
         }
 
         return(1);
