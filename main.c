@@ -5,7 +5,7 @@
  * Return: exit_success (0)
  */
 
-int main()
+int main(void)
 {
 	/* start shell loop. */
 	cshell_loop();
