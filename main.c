@@ -7,9 +7,9 @@
 
 int main()
 {
-        /* start shell loop. */
-        cshell_loop();
-        
-        /* shutdown/cleanup. */
-        return EXIT_SUCCESS;
-}
+	/* start shell loop. */
+	cshell_loop();
+
+	/* shutdown/cleanup. */
+	return (EXIT_SUCCESS);
+	}
