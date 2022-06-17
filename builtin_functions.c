@@ -1,11 +1,18 @@
 #include "main.h"
 
+/**
+ * builtin_string - list to contain all strings
+ */
 
 char *builtin_string[] = {
         "cd",
         "help",
         "exit"
 };
+
+/**
+ * builtin_funcs - array pointer to store bultin command addresses
+ */
 
 int (*builtin_funcs[]) (char **) = {
         &cshell_cd,
@@ -25,6 +32,7 @@ int cshell_builtin_num()
 
 /**
  * cshell_cd - handle cd errors
+ * @args: list of arguments
  * Return: (1) success.
  */
 
@@ -66,7 +74,7 @@ int cshell_help()
 
 /**
  * cshell_exit - exit the shell
- * Return: 0
+ * Return: 0 (done)
  */
 
 int cshell_exit()
@@ -76,6 +84,7 @@ int cshell_exit()
 
 /**
  * cshell_execute - execute program
+ * @args: list of arguments
  * Return: call the launch function
  */
 
