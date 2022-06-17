@@ -7,7 +7,7 @@
 
 char (*builtin_string[]) = { "cd", "help", "exit" };
 
-int (*builtin_funcs[]) (char **) = { &cshell_cd, &cshell_help, &cshell_exit };
+int *builtin_funcs[] (char **) = { &cshell_cd, &cshell_help, &cshell_exit };
 
 /**
  * cshell_builtin_num - get the number of items in builtin_string.
