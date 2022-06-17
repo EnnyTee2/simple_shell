@@ -5,7 +5,11 @@
  * builtin_funcs - array pointer to store bultin command addresses
  */
 
-char *builtin_string[] = { "cd", "help", "exit" };
+char *builtin_string[] = {
+        "cd",
+        "help",
+        "exit"
+};
 
 int (*builtin_funcs[]) (char **) = {
         &cshell_cd,
@@ -18,7 +22,7 @@ int (*builtin_funcs[]) (char **) = {
  * Return: int, number of elements.
  */
 
-int cshell_builtin_num(void)
+int cshell_builtin_num()
 {
 	return (sizeof(builtin_string) / sizeof(char *));
 }
