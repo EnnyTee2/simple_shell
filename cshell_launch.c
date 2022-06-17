@@ -34,5 +34,5 @@ int cshell_launch(char **args)
 		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
 
-	return(1);
+	return (1);
 }
