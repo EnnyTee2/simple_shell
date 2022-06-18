@@ -23,14 +23,14 @@ void free_data(data_shell *datash)
  * set_data - Initialize data structure
  *
  * @datash: data structure
- * @av: argument vector
+ * @argv: argument vector
  * Return: no return
  */
 void set_data(data_shell *datash, char **argv)
 {
 	unsigned int i;
 
-	datash->argv = argv;
+	datash->av = argv;
 	datash->input = NULL;
 	datash->args = NULL;
 	datash->status = 0;
@@ -53,8 +53,8 @@ void set_data(data_shell *datash, char **argv)
 /**
  * main - Entry point
  *
- * @ac: argument count
- * @av: argument vector
+ * @argc: argument count
+ * @argv: argument vector
  *
  * Return: 0 on success.
  */
